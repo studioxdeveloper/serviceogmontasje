@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server'
 
 // Map subdomains to their portal paths
 const SUBDOMAIN_MAP: Record<string, string> = {
+  'serviceogmontasje': '/admin',  // Main domain goes to admin
   'serviceogmontasjepartner': '/partner',
   'serviceogmontasjetekniker': '/tekniker',
   'serviceogmontasjekunde': '/kunde',
