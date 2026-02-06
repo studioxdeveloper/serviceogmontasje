@@ -96,13 +96,13 @@ export default function TechnicianOrdersPage() {
       </p>
 
       {/* Grouped orders */}
-      <div className="">
+      <div className="space-y-6">
         {todayOrders.length > 0 && (
           <div>
             <h2 className="text-sm font-semibold text-brand uppercase tracking-wider mb-4">
               I dag ({todayOrders.length})
             </h2>
-            <div className="">
+            <div>
               {todayOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -115,7 +115,7 @@ export default function TechnicianOrdersPage() {
             <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               I morgen ({tomorrowOrders.length})
             </h2>
-            <div className="">
+            <div>
               {tomorrowOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -128,7 +128,7 @@ export default function TechnicianOrdersPage() {
             <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               Senere ({laterOrders.length})
             </h2>
-            <div className="">
+            <div>
               {laterOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -141,7 +141,7 @@ export default function TechnicianOrdersPage() {
             <h2 className="text-sm font-semibold text-success-600 uppercase tracking-wider mb-4">
               Fullført ({completedOrders.length})
             </h2>
-            <div className="">
+            <div>
               {completedOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -163,7 +163,7 @@ export default function TechnicianOrdersPage() {
 
 function OrderListItem({ order }: { order: typeof orders[0] }) {
   return (
-    <Link href={`/tekniker/oppdrag/${order.id}`}>
+    <Link href={`/tekniker/oppdrag/${order.id}`} className="block mb-2">
       <Card hover className={cn(
         'p-4',
         order.priority === 'haster' && 'border-warning-200 bg-warning-50/30'

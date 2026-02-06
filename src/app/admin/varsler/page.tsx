@@ -171,7 +171,7 @@ export default function AdminNotificationsPage() {
           </div>
         </div>
 
-        <div className="">
+        <div className="space-y-2">
           {sentNotifications.map((notification) => (
             <div 
               key={notification.id}

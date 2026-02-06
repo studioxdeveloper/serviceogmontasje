@@ -177,9 +177,9 @@ export default function CustomerOrdersPage() {
         </Card>
 
         {/* Orders list */}
-        <div className="">
+        <div>
           {filteredOrders.map((order) => (
-            <Link key={order.id} href={`/kunde/oppdrag/${order.id}`}>
+            <Link key={order.id} href={`/kunde/oppdrag/${order.id}`} className="block mb-2">
               <Card hover className="p-5">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
