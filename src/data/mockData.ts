@@ -1,15 +1,15 @@
 // Mock data for prototype - Based on Funksjonell Beskrivelse v1.0
 
 export const partners = [
-  { id: '1', name: 'Service og Montasje AS', region: 'Landsdekkende', location: 'Hovedkontor', isMain: true },
-  { id: '2', name: 'Aktiv Handyman AS', region: 'Oslo/Akershus', location: 'Oslo', isMain: false },
-  { id: '3', name: 'Elektromedisinsk Service AS', region: 'Østlandet', location: 'Drammen', isMain: false },
-  { id: '4', name: 'Helseservice AS', region: 'Vestlandet', location: 'Bergen', isMain: false },
-  { id: '5', name: 'HVH Service AS', region: 'Vestfold', location: 'Tønsberg', isMain: false },
-  { id: '6', name: 'Trollholmen AS', region: 'Midt-Norge', location: 'Trondheim', isMain: false },
-  { id: '7', name: 'Hjelpemiddelservice', region: 'Nord-Norge', location: 'Tromsø', isMain: false },
-  { id: '8', name: 'EL-MED', region: 'Sørlandet', location: 'Kristiansand', isMain: false },
-  { id: '9', name: 'Agder Teknikk', region: 'Agder', location: 'Arendal', isMain: false },
+  { id: '1', name: 'Service og Montasje AS', region: 'Landsdekkende', location: 'Hovedkontor', isMain: true, email: 'firmapost@serviceogmontasje.no', phone: '+47 62 12 00 12' },
+  { id: '2', name: 'Aktiv Handyman AS', region: 'Oslo/Akershus', location: 'Oslo', isMain: false, email: 'post@aktivhandyman.no', phone: '+47 22 33 44 55' },
+  { id: '3', name: 'Elektromedisinsk Service AS', region: 'Østlandet', location: 'Drammen', isMain: false, email: 'post@elektromedisinsk.no', phone: '+47 32 11 22 33' },
+  { id: '4', name: 'Helseservice AS', region: 'Vestlandet', location: 'Bergen', isMain: false, email: 'post@helseservice.no', phone: '+47 55 44 33 22' },
+  { id: '5', name: 'HVH Service AS', region: 'Vestfold', location: 'Tønsberg', isMain: false, email: 'post@hvhservice.no', phone: '+47 33 22 11 00' },
+  { id: '6', name: 'Trollholmen AS', region: 'Midt-Norge', location: 'Trondheim', isMain: false, email: 'post@trollholmen.no', phone: '+47 73 88 77 66' },
+  { id: '7', name: 'Hjelpemiddelservice', region: 'Nord-Norge', location: 'Tromsø', isMain: false, email: 'post@hjelpemiddelservice.no', phone: '+47 77 66 55 44' },
+  { id: '8', name: 'EL-MED', region: 'Sørlandet', location: 'Kristiansand', isMain: false, email: 'post@el-med.no', phone: '+47 38 11 22 33' },
+  { id: '9', name: 'Agder Teknikk', region: 'Agder', location: 'Arendal', isMain: false, email: 'post@agderteknikk.no', phone: '+47 37 00 11 22' },
 ]
 
 // Customers based on document: NAV, Kommuner, Leverandører

@@ -68,18 +68,18 @@ export default function AdminPartnersPage() {
 
             <div className="space-y-2 mb-4">
               <a 
-                href={`mailto:${partner.email || 'kontakt@partner.no'}`}
+                href={`mailto:${partner.email}`}
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-brand transition-colors"
               >
                 <Mail className="w-4 h-4 text-gray-400" />
-                <span>{partner.email || 'kontakt@partner.no'}</span>
+                <span>{partner.email}</span>
               </a>
               <a 
-                href={`tel:${partner.phone || '+4722334455'}`}
+                href={`tel:${partner.phone}`}
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-brand transition-colors"
               >
                 <Phone className="w-4 h-4 text-gray-400" />
-                <span>{partner.phone || '+47 22 33 44 55'}</span>
+                <span>{partner.phone}</span>
               </a>
             </div>
 
