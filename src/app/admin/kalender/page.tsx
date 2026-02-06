@@ -188,7 +188,7 @@ export default function AdminCalendarPage() {
           </div>
 
           {selectedOrders.length > 0 ? (
-            <div className="space-y-4">
+            <div className="space-y-5">
               {selectedOrders.map((order) => (
                 <Link 
                   key={order.id}

@@ -136,7 +136,7 @@ export default function AdminNotificationsPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Mottakere</h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             {externalPartners.map((partner) => (
               <div 
                 key={partner.id}
@@ -171,7 +171,7 @@ export default function AdminNotificationsPage() {
           </div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-5">
           {sentNotifications.map((notification) => (
             <div 
               key={notification.id}
