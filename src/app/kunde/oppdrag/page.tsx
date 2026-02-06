@@ -177,7 +177,7 @@ export default function CustomerOrdersPage() {
         </Card>
 
         {/* Orders list */}
-        <div className="space-y-5">
+        <div className="space-y-6">
           {filteredOrders.map((order) => (
             <Link key={order.id} href={`/kunde/oppdrag/${order.id}`}>
               <Card hover className="p-5">

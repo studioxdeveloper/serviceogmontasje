@@ -198,7 +198,7 @@ export default function PartnerDashboardPage() {
             </Link>
           </div>
           
-          <div className="space-y-5">
+          <div className="space-y-6">
             {recentOrders.map((order) => (
               <Link 
                 key={order.id}
@@ -253,7 +253,7 @@ export default function PartnerDashboardPage() {
           </div>
           
           {overdueOrders.length > 0 ? (
-            <div className="space-y-5">
+            <div className="space-y-6">
               {overdueOrders.slice(0, 4).map((order) => (
                 <Link 
                   key={order.id}

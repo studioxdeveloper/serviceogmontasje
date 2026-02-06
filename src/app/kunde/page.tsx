@@ -126,7 +126,7 @@ export default function CustomerPortalPage() {
             </Link>
           </div>
           
-          <div className="space-y-5">
+          <div className="space-y-6">
             {equipment.map((item) => (
               <Link 
                 key={item.id}
@@ -176,7 +176,7 @@ export default function CustomerPortalPage() {
             </Link>
           </div>
           
-          <div className="space-y-5">
+          <div className="space-y-6">
             {activeOrders.map((order) => (
               <Link 
                 key={order.id}

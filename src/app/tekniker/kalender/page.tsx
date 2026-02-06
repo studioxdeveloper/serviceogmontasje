@@ -175,7 +175,7 @@ export default function TechnicianCalendarPage() {
 
       {/* Orders for selected date */}
       {selectedOrders.length > 0 ? (
-        <div className="space-y-5">
+        <div className="space-y-6">
           {selectedOrders.map((order) => (
             <Link 
               key={order.id}

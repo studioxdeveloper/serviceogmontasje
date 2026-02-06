@@ -165,11 +165,11 @@ export default function EquipmentDetailPage() {
         <Card className="p-6">
           <h2 className="font-heading font-semibold text-brand-dark mb-4">Enheter</h2>
           
-          <div className="space-y-5">
+          <div className="space-y-6">
             {category.items.map((item) => (
               <div 
                 key={item.id}
-                className="p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors"
+                className="p-5 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors"
               >
                 <div className="flex items-start justify-between mb-2">
                   <div>

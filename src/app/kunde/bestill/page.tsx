@@ -126,7 +126,7 @@ export default function OrderServicePage() {
           <Card className="p-6">
             <h2 className="font-heading font-semibold text-brand-dark mb-4">Hva slags service trenger du?</h2>
             
-            <div className="space-y-5">
+            <div className="space-y-6">
               {serviceTypes.map((type) => (
                 <button
                   key={type.id}

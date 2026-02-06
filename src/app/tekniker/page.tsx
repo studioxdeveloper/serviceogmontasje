@@ -72,7 +72,7 @@ export default function TechnicianHomePage() {
         </div>
 
         {todayOrders.length > 0 ? (
-          <div className="space-y-5">
+          <div className="space-y-6">
             {todayOrders.map((order) => {
               const overdue = isOverdue(order)
               return (
@@ -146,7 +146,7 @@ export default function TechnicianHomePage() {
       {activeOrders.filter(o => o.scheduledDate !== '2026-02-03').length > 0 && (
         <div>
           <h2 className="text-lg font-heading font-semibold text-brand-dark mb-4">Kommende oppdrag</h2>
-          <div className="space-y-5">
+          <div className="space-y-6">
             {activeOrders
               .filter(o => o.scheduledDate !== '2026-02-03')
               .slice(0, 3)
