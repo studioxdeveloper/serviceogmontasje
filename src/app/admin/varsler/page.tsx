@@ -136,7 +136,7 @@ export default function AdminNotificationsPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Mottakere</h2>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             {externalPartners.map((partner) => (
               <div 
                 key={partner.id}

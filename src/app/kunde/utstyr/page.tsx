@@ -114,7 +114,7 @@ export default function EquipmentListPage() {
         </Card>
 
         {/* Equipment list */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           {filteredEquipment.map((item) => (
             <Link key={item.id} href={`/kunde/utstyr/${item.id}`}>
               <Card hover className="p-5">

@@ -21,13 +21,17 @@
   }
   
   body {
-    @apply bg-brand-bg text-gray-900;
+    @apply bg-brand-bg text-gray-900 leading-relaxed;
     font-family: var(--font-inter);
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-poppins);
-    @apply font-medium tracking-tight;
+    @apply font-medium tracking-tight leading-snug;
+  }
+
+  p {
+    @apply leading-relaxed;
   }
 }
 

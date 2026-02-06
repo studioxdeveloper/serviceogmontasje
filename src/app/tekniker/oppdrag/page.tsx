@@ -50,7 +50,7 @@ export default function TechnicianOrdersPage() {
   return (
     <div className="px-4 py-6 animate-fade-in">
       {/* Header */}
-      <h1 className="text-2xl font-heading font-semibold text-sm-dark mb-6">Mine oppdrag</h1>
+      <h1 className="text-2xl font-heading font-semibold text-brand-dark mb-6">Mine oppdrag</h1>
 
       {/* Search */}
       <div className="relative mb-4">
@@ -60,7 +60,7 @@ export default function TechnicianOrdersPage() {
           placeholder="Søk etter ordre, kunde..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-12 pr-10 py-3 bg-white rounded-2xl border border-gray-100 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-sm-primary/20 focus:border-sm-light"
+          className="w-full pl-12 pr-10 py-3 bg-white rounded-2xl border border-gray-100 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand-light"
         />
         {searchQuery && (
           <button 
@@ -81,8 +81,8 @@ export default function TechnicianOrdersPage() {
             className={cn(
               'px-4 py-2 rounded-xl text-sm font-medium whitespace-nowrap transition-all',
               statusFilter === filter.value
-                ? 'bg-sm-primary text-white shadow-sm'
-                : 'bg-white text-gray-600 border border-gray-100 hover:border-sm-light'
+                ? 'bg-brand text-white shadow-sm'
+                : 'bg-white text-gray-600 border border-gray-100 hover:border-brand-light'
             )}
           >
             {filter.label}
@@ -99,10 +99,10 @@ export default function TechnicianOrdersPage() {
       <div className="space-y-6">
         {todayOrders.length > 0 && (
           <div>
-            <h2 className="text-sm font-semibold text-sm-primary uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-brand uppercase tracking-wider mb-4">
               I dag ({todayOrders.length})
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {todayOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -112,10 +112,10 @@ export default function TechnicianOrdersPage() {
 
         {tomorrowOrders.length > 0 && (
           <div>
-            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               I morgen ({tomorrowOrders.length})
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {tomorrowOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -125,10 +125,10 @@ export default function TechnicianOrdersPage() {
 
         {laterOrders.length > 0 && (
           <div>
-            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               Senere ({laterOrders.length})
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {laterOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -138,10 +138,10 @@ export default function TechnicianOrdersPage() {
 
         {completedOrders.length > 0 && statusFilter === 'all' && (
           <div>
-            <h2 className="text-sm font-semibold text-success-600 uppercase tracking-wider mb-3">
+            <h2 className="text-sm font-semibold text-success-600 uppercase tracking-wider mb-4">
               Fullført ({completedOrders.length})
             </h2>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {completedOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -173,7 +173,7 @@ function OrderListItem({ order }: { order: typeof orders[0] }) {
             'w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0',
             order.priority === 'haster' ? 'bg-danger-100 text-danger-600' :
             order.priority === 'hoy' ? 'bg-warning-100 text-warning-500' :
-            'bg-sm-light/30 text-sm-primary'
+            'bg-brand-light/30 text-brand'
           )}>
             <ClipboardList className="w-5 h-5" />
           </div>
@@ -181,7 +181,7 @@ function OrderListItem({ order }: { order: typeof orders[0] }) {
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-2">
               <div>
-                <h3 className="font-semibold text-sm-dark text-sm truncate">
+                <h3 className="font-semibold text-brand-dark text-sm truncate">
                   {order.customerName}
                 </h3>
                 <p className="text-xs text-gray-500 truncate">
@@ -195,7 +195,7 @@ function OrderListItem({ order }: { order: typeof orders[0] }) {
               <span className={cn(
                 'px-2 py-0.5 rounded-full text-xs font-medium',
                 order.status === 'uaapnet' && 'bg-gray-100 text-gray-700',
-                order.status === 'paabegynt' && 'bg-sm-light/30 text-sm-dark',
+                order.status === 'paabegynt' && 'bg-brand-light/30 text-brand-dark',
                 order.status === 'deler' && 'bg-warning-100 text-warning-600',
                 order.status === 'utfort' && 'bg-success-100 text-success-600',
               )}>

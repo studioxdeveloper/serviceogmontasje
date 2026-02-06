@@ -165,7 +165,7 @@ export default function EquipmentDetailPage() {
         <Card className="p-6">
           <h2 className="font-heading font-semibold text-brand-dark mb-4">Enheter</h2>
           
-          <div className="space-y-3">
+          <div className="space-y-4">
             {category.items.map((item) => (
               <div 
                 key={item.id}

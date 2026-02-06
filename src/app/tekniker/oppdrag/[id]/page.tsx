@@ -81,7 +81,7 @@ export default function TechnicianOrderDetailPage() {
         </div>
       </div>
 
-      <div className="px-4 py-6 space-y-4">
+      <div className="px-4 py-6 space-y-5">
         {/* Status card */}
         <Card className="p-5">
           <div className="flex items-center justify-between mb-4">
@@ -153,7 +153,7 @@ export default function TechnicianOrderDetailPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Kunde</h2>
           </div>
           
-          <div className="space-y-3">
+          <div className="space-y-4">
             <div>
               <p className="font-medium text-brand-dark">{order.customerName}</p>
               <p className="text-sm text-gray-500">{order.address}</p>

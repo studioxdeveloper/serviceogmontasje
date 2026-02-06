@@ -394,7 +394,7 @@ export default function PartnerOrderDetailPage() {
               <h2 className="font-heading font-semibold text-brand-dark">Kunde</h2>
             </div>
             
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div>
                 <p className="font-medium text-brand-dark">{order.customerName}</p>
                 <p className="text-xs text-gray-500 mt-0.5">Oppdragsgiver</p>
