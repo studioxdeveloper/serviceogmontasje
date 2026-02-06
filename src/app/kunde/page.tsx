@@ -126,11 +126,12 @@ export default function CustomerPortalPage() {
             </Link>
           </div>
           
-          <div className="">
+          <div>
             {equipment.map((item) => (
               <Link 
                 key={item.id}
                 href={`/kunde/utstyr/${item.id}`}
+                className="block mb-2"
               >
                 <div className="flex items-center justify-between p-4 bg-brand-bg/50 rounded-xl hover:bg-brand-light/20 transition-colors cursor-pointer">
                   <div className="flex items-center gap-4">
@@ -176,11 +177,12 @@ export default function CustomerPortalPage() {
             </Link>
           </div>
           
-          <div className="">
+          <div>
             {activeOrders.map((order) => (
               <Link 
                 key={order.id}
                 href={`/kunde/oppdrag/${order.id}`}
+                className="block mb-2"
               >
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors cursor-pointer">
                   <div className="flex items-center gap-4">
