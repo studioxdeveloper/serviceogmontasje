@@ -52,8 +52,11 @@ export function TechnicianLayout({ children }: { children: React.ReactNode }) {
           <nav className="mx-auto max-w-sm bg-brand-dark/95 backdrop-blur-xl rounded-full shadow-2xl px-2 py-2">
             <div className="flex items-center justify-around">
               {navigation.map((item) => {
-                const isActive = pathname === item.href || 
-                  (item.href === '/tekniker' && pathname.startsWith('/tekniker/oppdrag'))
+                // Oppdrag is active on /tekniker and /tekniker/oppdrag/*
+                // Other items are active when pathname starts with their href
+                const isActive = item.href === '/tekniker'
+                  ? pathname === '/tekniker' || pathname.startsWith('/tekniker/oppdrag')
+                  : pathname.startsWith(item.href)
                 
                 return (
                   <Link
