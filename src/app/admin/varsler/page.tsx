@@ -54,7 +54,7 @@ export default function AdminNotificationsPage() {
   const externalPartners = partners.filter(p => p.id !== '1')
 
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className=" animate-fade-in">
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -136,7 +136,7 @@ export default function AdminNotificationsPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Mottakere</h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="">
             {externalPartners.map((partner) => (
               <div 
                 key={partner.id}
@@ -171,7 +171,7 @@ export default function AdminNotificationsPage() {
           </div>
         </div>
 
-        <div className="space-y-8">
+        <div className="">
           {sentNotifications.map((notification) => (
             <div 
               key={notification.id}

@@ -63,7 +63,7 @@ export default function PartnerDashboardPage() {
   const maxValue = Math.max(...chartData.map(d => d.value), 1)
 
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className=" animate-fade-in">
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -198,12 +198,12 @@ export default function PartnerDashboardPage() {
             </Link>
           </div>
           
-          <div className="space-y-8">
+          <div>
             {recentOrders.map((order) => (
               <Link 
                 key={order.id}
                 href={`/partner/ordrer/${order.id}`}
-                className="flex items-center gap-4 p-3 rounded-xl hover:bg-brand-bg transition-colors group"
+                className="flex items-center gap-4 p-3 rounded-xl hover:bg-brand-bg transition-colors group block mb-2"
               >
                 <div className={cn(
                   'w-10 h-10 rounded-lg flex items-center justify-center',
@@ -253,12 +253,12 @@ export default function PartnerDashboardPage() {
           </div>
           
           {overdueOrders.length > 0 ? (
-            <div className="space-y-8">
+            <div>
               {overdueOrders.slice(0, 4).map((order) => (
                 <Link 
                   key={order.id}
                   href={`/partner/ordrer/${order.id}`}
-                  className="flex items-center gap-4 p-3 rounded-xl bg-danger-50 hover:bg-danger-100 transition-colors"
+                  className="flex items-center gap-4 p-3 rounded-xl bg-danger-50 hover:bg-danger-100 transition-colors block mb-2"
                 >
                   <div className="flex-1 min-w-0">
                     <p className="font-medium text-danger-700 text-sm truncate">
