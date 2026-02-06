@@ -76,7 +76,7 @@ export default function TechnicianHomePage() {
             {todayOrders.map((order) => {
               const overdue = isOverdue(order)
               return (
-                <Link key={order.id} href={`/tekniker/oppdrag/${order.id}`} className="block mb-6">
+                <Link key={order.id} href={`/tekniker/oppdrag/${order.id}`} className="block mb-2">
                   <Card hover className={cn(
                     'p-4',
                     overdue && 'border-danger-200 bg-danger-50/50',
@@ -151,7 +151,7 @@ export default function TechnicianHomePage() {
               .filter(o => o.scheduledDate !== '2026-02-03')
               .slice(0, 3)
               .map((order) => (
-                <Link key={order.id} href={`/tekniker/oppdrag/${order.id}`} className="block mb-6">
+                <Link key={order.id} href={`/tekniker/oppdrag/${order.id}`} className="block mb-2">
                   <Card hover className="p-4">
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center">
