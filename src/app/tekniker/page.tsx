@@ -46,7 +46,7 @@ export default function TechnicianHomePage() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-2 gap-3 mb-8">
         {stats.map((stat) => (
           <Card key={stat.label} className="p-4">
             <div className="flex items-center gap-3">
@@ -63,7 +63,7 @@ export default function TechnicianHomePage() {
       </div>
 
       {/* Today's orders */}
-      <div className="mb-6">
+      <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-heading font-semibold text-brand-dark">Dagens oppdrag</h2>
           <Link href="/tekniker/oppdrag" className="text-sm text-brand font-medium flex items-center gap-1">
