@@ -114,10 +114,10 @@ export default function EquipmentListPage() {
         </Card>
 
         {/* Equipment list */}
-        <div className="space-y-6">
+        <div className="space-y-8">
           {filteredEquipment.map((item) => (
             <Link key={item.id} href={`/kunde/utstyr/${item.id}`}>
-              <Card hover className="p-6">
+              <Card hover className="p-5">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-brand-light/30 flex items-center justify-center">

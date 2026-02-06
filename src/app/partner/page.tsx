@@ -63,7 +63,7 @@ export default function PartnerDashboardPage() {
   const maxValue = Math.max(...chartData.map(d => d.value), 1)
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -198,7 +198,7 @@ export default function PartnerDashboardPage() {
             </Link>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-8">
             {recentOrders.map((order) => (
               <Link 
                 key={order.id}
@@ -253,7 +253,7 @@ export default function PartnerDashboardPage() {
           </div>
           
           {overdueOrders.length > 0 ? (
-            <div className="space-y-6">
+            <div className="space-y-8">
               {overdueOrders.slice(0, 4).map((order) => (
                 <Link 
                   key={order.id}

@@ -126,13 +126,13 @@ export default function CustomerPortalPage() {
             </Link>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-8">
             {equipment.map((item) => (
               <Link 
                 key={item.id}
                 href={`/kunde/utstyr/${item.id}`}
               >
-                <div className="flex items-center justify-between p-5 bg-brand-bg/50 rounded-xl hover:bg-brand-light/20 transition-colors cursor-pointer">
+                <div className="flex items-center justify-between p-4 bg-brand-bg/50 rounded-xl hover:bg-brand-light/20 transition-colors cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
                       <Package className="w-5 h-5 text-brand" />
@@ -176,13 +176,13 @@ export default function CustomerPortalPage() {
             </Link>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-8">
             {activeOrders.map((order) => (
               <Link 
                 key={order.id}
                 href={`/kunde/oppdrag/${order.id}`}
               >
-                <div className="flex items-center justify-between p-5 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors cursor-pointer">
+                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-lg bg-brand-light/30 flex items-center justify-center">
                       <Wrench className="w-5 h-5 text-brand" />

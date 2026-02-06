@@ -20,7 +20,7 @@ export default function AdminPartnersPage() {
   const externalPartners = partners.filter(p => p.id !== '1')
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>

@@ -64,7 +64,7 @@ export default function PartnerCalendarPage() {
   }
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-8 animate-fade-in">
       {/* Page header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -188,7 +188,7 @@ export default function PartnerCalendarPage() {
           </div>
 
           {selectedOrders.length > 0 ? (
-            <div className="space-y-6">
+            <div className="space-y-8">
               {selectedOrders.map((order) => (
                 <Link 
                   key={order.id}

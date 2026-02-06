@@ -61,7 +61,7 @@ export default function TechnicianCalendarPage() {
   }
 
   return (
-    <div className="px-4 py-6 space-y-6 animate-fade-in pb-20">
+    <div className="px-4 py-6 space-y-8 animate-fade-in pb-20">
       {/* Page header */}
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-heading font-semibold text-brand-dark">Kalender</h1>
@@ -175,7 +175,7 @@ export default function TechnicianCalendarPage() {
 
       {/* Orders for selected date */}
       {selectedOrders.length > 0 ? (
-        <div className="space-y-6">
+        <div className="space-y-8">
           {selectedOrders.map((order) => (
             <Link 
               key={order.id}

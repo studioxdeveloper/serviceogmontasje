@@ -126,7 +126,7 @@ export default function OrderServicePage() {
           <Card className="p-6">
             <h2 className="font-heading font-semibold text-brand-dark mb-4">Hva slags service trenger du?</h2>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               {serviceTypes.map((type) => (
                 <button
                   key={type.id}
@@ -154,7 +154,7 @@ export default function OrderServicePage() {
 
         {/* Step 2: Equipment & Location */}
         {step === 2 && (
-          <div className="space-y-6">
+          <div className="space-y-8">
             <Card className="p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Package className="w-5 h-5 text-brand" />
@@ -240,7 +240,7 @@ export default function OrderServicePage() {
 
         {/* Step 3: Details & Submit */}
         {step === 3 && (
-          <div className="space-y-6">
+          <div className="space-y-8">
             <Card className="p-6">
               <div className="flex items-center gap-2 mb-4">
                 <FileText className="w-5 h-5 text-brand" />

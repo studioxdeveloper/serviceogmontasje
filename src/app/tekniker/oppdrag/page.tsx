@@ -96,13 +96,13 @@ export default function TechnicianOrdersPage() {
       </p>
 
       {/* Grouped orders */}
-      <div className="space-y-6">
+      <div className="space-y-8">
         {todayOrders.length > 0 && (
           <div>
             <h2 className="text-sm font-semibold text-brand uppercase tracking-wider mb-4">
               I dag ({todayOrders.length})
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {todayOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -115,7 +115,7 @@ export default function TechnicianOrdersPage() {
             <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               I morgen ({tomorrowOrders.length})
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {tomorrowOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -128,7 +128,7 @@ export default function TechnicianOrdersPage() {
             <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
               Senere ({laterOrders.length})
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {laterOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
@@ -141,7 +141,7 @@ export default function TechnicianOrdersPage() {
             <h2 className="text-sm font-semibold text-success-600 uppercase tracking-wider mb-4">
               Fullført ({completedOrders.length})
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {completedOrders.map((order) => (
                 <OrderListItem key={order.id} order={order} />
               ))}
