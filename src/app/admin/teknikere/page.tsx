@@ -34,8 +34,8 @@ export default function AdminTechniciansPage() {
     const techOrders = orders.filter(o => o.technicianId === techId)
     return {
       total: techOrders.length,
-      completed: techOrders.filter(o => o.status === 'completed').length,
-      active: techOrders.filter(o => o.status !== 'completed').length,
+      completed: techOrders.filter(o => o.status === 'utfort' || o.status === 'fakturert').length,
+      active: techOrders.filter(o => o.status !== 'utfort' && o.status !== 'fakturert' && o.status !== 'kansellert').length,
     }
   }
 
@@ -203,7 +203,7 @@ export default function AdminTechniciansPage() {
           })}
         </div>
       ) : (
-        <Card padding="none">
+        <Card className="p-0">
           <table className="w-full">
             <thead>
               <tr className="text-left text-xs text-gray-500 uppercase tracking-wider border-b border-gray-100 bg-gray-50">

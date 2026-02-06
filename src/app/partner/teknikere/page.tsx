@@ -21,8 +21,8 @@ export default function PartnerTechniciansPage() {
   const getTechnicianStats = (techId: string) => {
     const techOrders = partnerOrders.filter(o => o.technicianId === techId)
     return {
-      active: techOrders.filter(o => o.status !== 'completed').length,
-      completed: techOrders.filter(o => o.status === 'completed').length,
+      active: techOrders.filter(o => o.status !== 'utfort' && o.status !== 'fakturert' && o.status !== 'kansellert').length,
+      completed: techOrders.filter(o => o.status === 'utfort' || o.status === 'fakturert').length,
     }
   }
 

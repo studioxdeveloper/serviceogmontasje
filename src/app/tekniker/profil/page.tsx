@@ -104,7 +104,7 @@ export default function TechnicianProfilePage() {
       </Card>
 
       {/* Menu items */}
-      <Card className="mb-4" padding="none">
+      <Card className="mb-4 p-0">
         {menuItems.map((item, index) => (
           <button
             key={item.label}

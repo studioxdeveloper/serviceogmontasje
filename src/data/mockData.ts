@@ -55,7 +55,7 @@ export interface Order {
   equipmentType: string
   equipmentBrand?: string
   equipmentModel?: string
-  serialNumber?: string
+  serialNumber?: string | null
   partnerId: string
   partnerName: string
   technicianId: string | null

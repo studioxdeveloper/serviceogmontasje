@@ -18,7 +18,7 @@ const currentTechnician = technicians[0]
 
 export default function TechnicianMapPage() {
   const myOrders = orders.filter(o => 
-    o.technicianId === currentTechnician.id && o.status !== 'completed'
+    o.technicianId === currentTechnician.id && o.status !== 'utfort' && o.status !== 'fakturert' && o.status !== 'kansellert'
   )
 
   return (
@@ -118,13 +118,13 @@ export default function TechnicianMapPage() {
             >
               <div className={cn(
                 'w-10 h-10 rounded-xl flex items-center justify-center',
-                order.priority === 'urgent' ? 'bg-red-100 text-red-600' : 'bg-brand-100 text-brand-600'
+                order.priority === 'haster' ? 'bg-red-100 text-red-600' : 'bg-brand-100 text-brand-600'
               )}>
                 <MapPin className="w-5 h-5" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-medium text-gray-900 truncate">{order.customerName}</p>
-                <p className="text-sm text-gray-500 truncate">{order.customerAddress}</p>
+                <p className="text-sm text-gray-500 truncate">{order.address}, {order.city}</p>
               </div>
               <div className="text-right flex items-center gap-2">
                 <div>
