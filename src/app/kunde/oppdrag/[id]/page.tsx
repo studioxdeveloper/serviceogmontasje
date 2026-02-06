@@ -341,7 +341,7 @@ export default function CustomerOrderDetailPage() {
               </div>
               
               {order.technician ? (
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center">
                       <span className="text-white text-sm font-medium">

@@ -211,7 +211,7 @@ export default function EquipmentDetailPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Servicehistorikk</h2>
           </div>
           
-          <div className="space-y-3">
+          <div className="space-y-2">
             <div className="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
               <div className="w-2 h-2 rounded-full bg-success-500" />
               <div className="flex-1">

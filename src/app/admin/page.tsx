@@ -147,7 +147,7 @@ export default function AdminDashboardPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Kunngjøringer</h2>
           </div>
           
-          <div className="space-y-3">
+          <div className="space-y-2">
             <div className="p-3 bg-brand-bg rounded-lg">
               <p className="text-sm font-medium text-brand-dark">Ny avtale med Mediq AS</p>
               <p className="text-xs text-gray-500 mt-1">Oppdaterte priser fra 1. mars 2026</p>

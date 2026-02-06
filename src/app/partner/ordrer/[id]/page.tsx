@@ -433,7 +433,7 @@ export default function PartnerOrderDetailPage() {
                 </div>
               </div>
             ) : (
-              <div className="space-y-3">
+              <div className="space-y-2">
                 <div className="p-3 bg-warning-50 rounded-xl">
                   <p className="text-sm text-warning-600">Ingen tekniker tildelt</p>
                 </div>

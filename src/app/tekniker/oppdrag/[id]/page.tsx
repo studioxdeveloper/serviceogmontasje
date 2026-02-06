@@ -336,7 +336,7 @@ export default function TechnicianOrderDetailPage() {
         <div className="fixed inset-0 bg-black/50 z-50 flex items-end">
           <div className="bg-white w-full rounded-t-3xl p-6 animate-slide-up">
             <h3 className="text-lg font-heading font-semibold text-brand-dark mb-4">Oppdater status</h3>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {displayStatus === 'uaapnet' ? (
                 <Button 
                   size="lg" 
