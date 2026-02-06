@@ -59,9 +59,9 @@ export default function TechnicianOrderDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-sm-bg pb-32">
+    <div className="min-h-screen bg-brand-bg pb-32">
       {/* Header */}
-      <div className="bg-sm-dark px-4 py-4 sticky top-0 z-20">
+      <div className="bg-brand-dark px-4 py-4 sticky top-0 z-20">
         <div className="flex items-center gap-3">
           <button 
             onClick={() => router.back()}
@@ -71,7 +71,7 @@ export default function TechnicianOrderDetailPage() {
           </button>
           <div className="flex-1">
             <h1 className="font-semibold text-white">Oppdrag {order.orderNumber}</h1>
-            <p className="text-sm text-sm-light">{orderTypeLabels[order.orderType]}</p>
+            <p className="text-sm text-brand-light">{orderTypeLabels[order.orderType]}</p>
           </div>
           {order.priority === 'haster' && (
             <span className="px-2.5 py-1 bg-danger-500 text-white text-xs font-medium rounded-full">
@@ -90,7 +90,7 @@ export default function TechnicianOrderDetailPage() {
               <span className={cn(
                 'px-3 py-1 rounded-full text-sm font-medium',
                 displayStatus === 'uaapnet' && 'bg-gray-100 text-gray-700',
-                displayStatus === 'paabegynt' && 'bg-sm-light/30 text-sm-dark',
+                displayStatus === 'paabegynt' && 'bg-brand-light/30 text-brand-dark',
                 displayStatus === 'deler' && 'bg-warning-100 text-warning-600',
                 displayStatus === 'utfort' && 'bg-success-100 text-success-600',
               )}>
@@ -109,15 +109,15 @@ export default function TechnicianOrderDetailPage() {
                 <div key={status} className="flex-1 flex items-center">
                   <div className={cn(
                     'w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-all',
-                    isCompleted ? 'bg-sm-primary text-white' : 'bg-gray-100 text-gray-400',
-                    isCurrent && 'ring-4 ring-sm-light/50'
+                    isCompleted ? 'bg-brand text-white' : 'bg-gray-100 text-gray-400',
+                    isCurrent && 'ring-4 ring-brand-light/50'
                   )}>
                     {isCompleted ? <CheckCircle className="w-4 h-4" /> : index + 1}
                   </div>
                   {index < statusFlow.length - 1 && (
                     <div className={cn(
                       'flex-1 h-1 mx-2 rounded-full',
-                      isCompleted && index < currentIndex ? 'bg-sm-primary' : 'bg-gray-100'
+                      isCompleted && index < currentIndex ? 'bg-brand' : 'bg-gray-100'
                     )} />
                   )}
                 </div>
@@ -149,13 +149,13 @@ export default function TechnicianOrderDetailPage() {
         {/* Customer info */}
         <Card className="p-5">
           <div className="flex items-center gap-2 mb-4">
-            <Building2 className="w-5 h-5 text-sm-primary" />
-            <h2 className="font-heading font-semibold text-sm-dark">Kunde</h2>
+            <Building2 className="w-5 h-5 text-brand" />
+            <h2 className="font-heading font-semibold text-brand-dark">Kunde</h2>
           </div>
           
           <div className="space-y-3">
             <div>
-              <p className="font-medium text-sm-dark">{order.customerName}</p>
+              <p className="font-medium text-brand-dark">{order.customerName}</p>
               <p className="text-sm text-gray-500">{order.address}</p>
               <p className="text-sm text-gray-500">{order.city}</p>
             </div>
@@ -204,31 +204,31 @@ export default function TechnicianOrderDetailPage() {
         {/* Equipment info */}
         <Card className="p-5">
           <div className="flex items-center gap-2 mb-4">
-            <Wrench className="w-5 h-5 text-sm-primary" />
-            <h2 className="font-heading font-semibold text-sm-dark">Utstyr</h2>
+            <Wrench className="w-5 h-5 text-brand" />
+            <h2 className="font-heading font-semibold text-brand-dark">Utstyr</h2>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
             <div>
               <p className="text-xs text-gray-500 uppercase tracking-wider">Type</p>
-              <p className="font-medium text-sm-dark">{order.equipmentType}</p>
+              <p className="font-medium text-brand-dark">{order.equipmentType}</p>
             </div>
             {order.equipmentBrand && (
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider">Merke</p>
-                <p className="font-medium text-sm-dark">{order.equipmentBrand}</p>
+                <p className="font-medium text-brand-dark">{order.equipmentBrand}</p>
               </div>
             )}
             {order.equipmentModel && (
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider">Modell</p>
-                <p className="font-medium text-sm-dark">{order.equipmentModel}</p>
+                <p className="font-medium text-brand-dark">{order.equipmentModel}</p>
               </div>
             )}
             {order.serialNumber && (
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider">Serienr.</p>
-                <p className="font-medium text-sm-dark font-mono text-sm">{order.serialNumber}</p>
+                <p className="font-medium text-brand-dark font-mono text-sm">{order.serialNumber}</p>
               </div>
             )}
           </div>
@@ -237,8 +237,8 @@ export default function TechnicianOrderDetailPage() {
         {/* Description */}
         <Card className="p-5">
           <div className="flex items-center gap-2 mb-3">
-            <FileText className="w-5 h-5 text-sm-primary" />
-            <h2 className="font-heading font-semibold text-sm-dark">Beskrivelse</h2>
+            <FileText className="w-5 h-5 text-brand" />
+            <h2 className="font-heading font-semibold text-brand-dark">Beskrivelse</h2>
           </div>
           <p className="text-gray-700">{order.description}</p>
         </Card>
@@ -247,10 +247,10 @@ export default function TechnicianOrderDetailPage() {
         {order.scheduledDate && (
           <Card className="p-5">
             <div className="flex items-center gap-2 mb-3">
-              <Calendar className="w-5 h-5 text-sm-primary" />
-              <h2 className="font-heading font-semibold text-sm-dark">Planlagt</h2>
+              <Calendar className="w-5 h-5 text-brand" />
+              <h2 className="font-heading font-semibold text-brand-dark">Planlagt</h2>
             </div>
-            <p className="text-sm-dark font-medium">
+            <p className="text-brand-dark font-medium">
               {new Date(order.scheduledDate).toLocaleDateString('nb-NO', {
                 weekday: 'long',
                 day: 'numeric',
@@ -270,18 +270,18 @@ export default function TechnicianOrderDetailPage() {
         {order.technicianNotes && (
           <Card className="p-5">
             <div className="flex items-center justify-between mb-3">
-              <h2 className="font-heading font-semibold text-sm-dark">Mine notater</h2>
+              <h2 className="font-heading font-semibold text-brand-dark">Mine notater</h2>
               <Button variant="ghost" size="sm">
                 <Edit className="w-4 h-4" />
               </Button>
             </div>
-            <p className="text-gray-700 bg-sm-bg p-3 rounded-xl text-sm">{order.technicianNotes}</p>
+            <p className="text-gray-700 bg-brand-bg p-3 rounded-xl text-sm">{order.technicianNotes}</p>
           </Card>
         )}
 
         {/* Time registration */}
         <Card className="p-5">
-          <h2 className="font-heading font-semibold text-sm-dark mb-4">Registrer tid og kostnader</h2>
+          <h2 className="font-heading font-semibold text-brand-dark mb-4">Registrer tid og kostnader</h2>
           
           <div className="grid grid-cols-2 gap-3">
             <div>
@@ -289,7 +289,7 @@ export default function TechnicianOrderDetailPage() {
               <input 
                 type="number" 
                 defaultValue={order.hours || 0}
-                className="w-full mt-1 px-3 py-2.5 bg-gray-50 rounded-xl border-0 text-sm focus:ring-2 focus:ring-sm-primary/20"
+                className="w-full mt-1 px-3 py-2.5 bg-gray-50 rounded-xl border-0 text-sm focus:ring-2 focus:ring-brand/20"
               />
             </div>
             <div>
@@ -297,7 +297,7 @@ export default function TechnicianOrderDetailPage() {
               <input 
                 type="number" 
                 defaultValue={order.kilometers || 0}
-                className="w-full mt-1 px-3 py-2.5 bg-gray-50 rounded-xl border-0 text-sm focus:ring-2 focus:ring-sm-primary/20"
+                className="w-full mt-1 px-3 py-2.5 bg-gray-50 rounded-xl border-0 text-sm focus:ring-2 focus:ring-brand/20"
               />
             </div>
           </div>
@@ -335,7 +335,7 @@ export default function TechnicianOrderDetailPage() {
       {showStatusModal && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-end">
           <div className="bg-white w-full rounded-t-3xl p-6 animate-slide-up">
-            <h3 className="text-lg font-heading font-semibold text-sm-dark mb-4">Oppdater status</h3>
+            <h3 className="text-lg font-heading font-semibold text-brand-dark mb-4">Oppdater status</h3>
             <div className="space-y-3">
               {displayStatus === 'uaapnet' ? (
                 <Button 
