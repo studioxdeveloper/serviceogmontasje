@@ -26,10 +26,10 @@ export function TechnicianLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-brand-bg flex justify-center">
       {/* Max-width container for iPad/iPhone */}
-      <div className="w-full max-w-[900px] flex flex-col min-h-screen relative">
-        {/* Top header - only on main pages */}
+      <div className="w-full max-w-[900px] flex flex-col min-h-screen relative bg-brand-bg shadow-xl">
+        {/* Top header - iOS glass style */}
         {!isDetailPage && (
-          <header className="bg-brand-dark px-4 py-3 flex items-center justify-between sticky top-0 z-20">
+          <header className="sticky top-0 z-20 px-4 py-3 flex items-center justify-between bg-brand-dark/95 backdrop-blur-xl border-b border-white/10">
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">&amp;</span>
@@ -43,12 +43,12 @@ export function TechnicianLayout({ children }: { children: React.ReactNode }) {
         )}
 
         {/* Main content */}
-        <main className="flex-1 pb-20">
+        <main className="flex-1 pb-24">
           {children}
         </main>
 
-        {/* Bottom navigation */}
-        <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] bg-white border-t border-gray-100 px-6 py-2 z-30">
+        {/* Bottom navigation - iOS glass style */}
+        <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] z-30 bg-white/80 backdrop-blur-xl border-t border-gray-200/50 px-6 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))]">
           <div className="flex items-center justify-around max-w-md mx-auto">
             {navigation.map((item) => {
               const isActive = pathname === item.href || 
