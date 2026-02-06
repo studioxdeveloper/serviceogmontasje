@@ -40,6 +40,7 @@ import {
   Plus
 } from 'lucide-react'
 import Link from 'next/link'
+import { DummyMap } from '@/components/ui/DummyMap'
 
 // Mock log history
 const getLogHistory = (orderId: string) => [
@@ -347,29 +348,33 @@ export default function OrderDetailPage() {
         {/* Right column - Sidebar */}
         <div className="space-y-6">
           {/* Location card */}
-          <Card className="p-6">
-            <div className="flex items-center gap-2 mb-4">
-              <MapPin className="w-5 h-5 text-brand" />
-              <h2 className="font-heading font-semibold text-brand-dark">Lokasjon</h2>
-            </div>
-            
-            {/* Map placeholder */}
-            <div className="h-40 bg-brand-bg rounded-xl flex items-center justify-center mb-4">
-              <div className="text-center">
-                <MapPin className="w-8 h-8 text-brand-light mx-auto mb-2" />
-                <p className="text-sm text-gray-500">Kart</p>
+          <Card className="p-0 overflow-hidden">
+            <DummyMap 
+              markers={[{
+                id: order.id,
+                lat: 59.9,
+                lng: 10.7,
+                type: order.priority === 'haster' ? 'urgent' : 'default',
+                label: order.city
+              }]}
+              showControls={false}
+              showUserLocation={false}
+              height="h-36"
+            />
+            <div className="p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin className="w-4 h-4 text-brand" />
+                <h2 className="font-heading font-semibold text-brand-dark text-sm">Lokasjon</h2>
               </div>
+              <div className="space-y-1 mb-3">
+                <p className="font-medium text-brand-dark text-sm">{order.address}</p>
+                <p className="text-xs text-gray-500">{order.city}</p>
+              </div>
+              <Button variant="outline" size="sm" className="w-full">
+                <Navigation className="w-4 h-4 mr-2" />
+                Åpne i kart
+              </Button>
             </div>
-            
-            <div className="space-y-2">
-              <p className="font-medium text-brand-dark">{order.address}</p>
-              <p className="text-sm text-gray-500">{order.city}</p>
-            </div>
-            
-            <Button variant="outline" className="w-full mt-4">
-              <Navigation className="w-4 h-4 mr-2" />
-              Åpne i kart
-            </Button>
           </Card>
 
           {/* Customer card */}

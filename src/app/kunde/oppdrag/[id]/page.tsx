@@ -14,9 +14,11 @@ import {
   Phone,
   FileText,
   Package,
-  MessageSquare
+  MessageSquare,
+  Navigation
 } from 'lucide-react'
 import Link from 'next/link'
+import { DummyMap } from '@/components/ui/DummyMap'
 import { cn } from '@/lib/utils'
 
 // Mock order details
@@ -306,15 +308,28 @@ export default function CustomerOrderDetailPage() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Location */}
-            <Card className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <MapPin className="w-5 h-5 text-brand" />
-                <h2 className="font-heading font-semibold text-brand-dark">Lokasjon</h2>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="font-medium text-brand-dark">{order.location}</p>
-                <p className="text-sm text-gray-500">{order.address}</p>
+            <Card className="p-0 overflow-hidden">
+              <DummyMap 
+                markers={[{
+                  id: order.id,
+                  lat: 59.9,
+                  lng: 10.7,
+                  type: 'default',
+                  label: order.location.split(' ')[0]
+                }]}
+                showControls={false}
+                showUserLocation={false}
+                height="h-32"
+              />
+              <div className="p-4">
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin className="w-4 h-4 text-brand" />
+                  <h2 className="font-heading font-semibold text-brand-dark text-sm">Lokasjon</h2>
+                </div>
+                <div className="space-y-1">
+                  <p className="font-medium text-brand-dark text-sm">{order.location}</p>
+                  <p className="text-xs text-gray-500">{order.address}</p>
+                </div>
               </div>
             </Card>
 

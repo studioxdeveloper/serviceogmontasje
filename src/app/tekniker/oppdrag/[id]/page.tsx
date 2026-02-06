@@ -24,10 +24,10 @@ import {
   CheckCircle,
   AlertTriangle,
   Building2,
-  User,
   Calendar,
   Edit
 } from 'lucide-react'
+import { DummyMap } from '@/components/ui/DummyMap'
 
 export default function TechnicianOrderDetailPage() {
   const params = useParams()
@@ -168,6 +168,34 @@ export default function TechnicianOrderDetailPage() {
               <Button variant="secondary" size="sm" className="flex-1">
                 <Navigation className="w-4 h-4 mr-2" />
                 Navigér
+              </Button>
+            </div>
+          </div>
+        </Card>
+
+        {/* Location map */}
+        <Card className="p-0 overflow-hidden">
+          <DummyMap 
+            markers={[{
+              id: order.id,
+              lat: 59.9,
+              lng: 10.7,
+              type: order.priority === 'haster' ? 'urgent' : 'default',
+              label: order.city
+            }]}
+            showControls={false}
+            showUserLocation={false}
+            height="h-40"
+          />
+          <div className="p-4 border-t border-gray-100">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <MapPin className="w-4 h-4" />
+                <span>{order.address}, {order.city}</span>
+              </div>
+              <Button variant="secondary" size="sm">
+                <Navigation className="w-4 h-4 mr-1" />
+                Åpne i kart
               </Button>
             </div>
           </div>
