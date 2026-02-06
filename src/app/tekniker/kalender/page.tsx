@@ -61,9 +61,9 @@ export default function TechnicianCalendarPage() {
   }
 
   return (
-    <div className="px-4 py-6  animate-fade-in pb-20">
+    <div className="px-4 py-6 space-y-6 animate-fade-in pb-20">
       {/* Page header */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-heading font-semibold text-brand-dark">Kalender</h1>
         <span className="text-sm text-gray-500">
           {MONTHS[month]} {year}
@@ -154,7 +154,7 @@ export default function TechnicianCalendarPage() {
       </Card>
 
       {/* Selected date header */}
-      <div className="flex items-center gap-2 pt-2">
+      <div className="flex items-center gap-2 pt-2 mb-4">
         <CalendarIcon className="w-5 h-5 text-brand" />
         <h2 className="font-semibold text-brand-dark">
           {selectedDate 
