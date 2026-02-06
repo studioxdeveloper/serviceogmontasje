@@ -81,7 +81,7 @@ export default function TechnicianOrderDetailPage() {
         </div>
       </div>
 
-      <div className="px-4 py-6 space-y-8">
+      <div className="px-4 py-6 space-y-6">
         {/* Status card */}
         <Card className="p-5">
           <div className="flex items-center justify-between mb-4">

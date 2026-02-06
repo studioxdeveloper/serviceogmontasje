@@ -235,7 +235,7 @@ export default function CustomerOrderDetailPage() {
 
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Main content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-6">
             {/* Equipment info */}
             <Card className="p-6">
               <div className="flex items-center gap-2 mb-4">
@@ -306,7 +306,7 @@ export default function CustomerOrderDetailPage() {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Location */}
             <Card className="p-0 overflow-hidden">
               <DummyMap 

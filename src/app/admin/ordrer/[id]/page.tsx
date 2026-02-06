@@ -84,7 +84,7 @@ export default function OrderDetailPage() {
   }
 
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className="space-y-6 animate-fade-in">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-4">
@@ -124,7 +124,7 @@ export default function OrderDetailPage() {
       {/* Main content */}
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Left column - Order details */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-6">
           {/* Order info card */}
           <Card className="p-6">
             <h2 className="font-heading font-semibold text-brand-dark mb-6">Oppdragsinformasjon</h2>
@@ -346,7 +346,7 @@ export default function OrderDetailPage() {
         </div>
 
         {/* Right column - Sidebar */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {/* Location card */}
           <Card className="p-0 overflow-hidden">
             <DummyMap 

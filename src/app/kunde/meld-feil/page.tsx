@@ -102,7 +102,7 @@ export default function ReportErrorPage() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-6 space-y-8">
+      <main className="max-w-4xl mx-auto px-6 py-6 space-y-6">
         {/* Urgent toggle */}
         <Card className={cn(
           'p-4 transition-colors',

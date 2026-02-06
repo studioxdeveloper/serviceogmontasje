@@ -76,7 +76,7 @@ export default function AdminSettingsPage() {
         </div>
 
         {/* Settings content */}
-        <div className="lg:col-span-2 space-y-8">
+        <div className="lg:col-span-2 space-y-6">
           {/* Company info */}
           <Card>
             <CardHeader>
