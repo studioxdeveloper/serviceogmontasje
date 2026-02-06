@@ -58,7 +58,7 @@ export default function CustomerPortalPage() {
 
       <main className="max-w-4xl mx-auto px-6 -mt-4 pb-12">
         {/* Quick actions */}
-        <div className="grid grid-cols-3 gap-3 mb-6">
+        <div className="grid grid-cols-3 gap-3 mb-8">
           <Link href="/kunde/bestill">
             <Card hover className="p-4 text-center">
               <div className="w-12 h-12 rounded-xl bg-brand-light/30 flex items-center justify-center mx-auto mb-2">
@@ -86,7 +86,7 @@ export default function CustomerPortalPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-2 gap-4 mb-8">
           <Link href="/kunde/utstyr">
             <Card hover className="p-5">
               <div className="flex items-center gap-3">
@@ -116,7 +116,7 @@ export default function CustomerPortalPage() {
         </div>
 
         {/* Equipment overview */}
-        <Card className="p-6 mb-6">
+        <Card className="p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-heading font-semibold text-brand-dark">Utstyrsoversikt</h2>
             <Link href="/kunde/utstyr">
@@ -132,7 +132,7 @@ export default function CustomerPortalPage() {
                 key={item.id}
                 href={`/kunde/utstyr/${item.id}`}
               >
-                <div className="flex items-center justify-between p-4 bg-brand-bg/50 rounded-xl hover:bg-brand-light/20 transition-colors cursor-pointer">
+                <div className="flex items-center justify-between p-5 bg-brand-bg/50 rounded-xl hover:bg-brand-light/20 transition-colors cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
                       <Package className="w-5 h-5 text-brand" />
@@ -168,7 +168,7 @@ export default function CustomerPortalPage() {
         </Card>
 
         {/* Active orders */}
-        <Card className="p-6 mb-6">
+        <Card className="p-6 mb-8">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-heading font-semibold text-brand-dark">Pågående oppdrag</h2>
             <Link href="/kunde/oppdrag">
@@ -182,7 +182,7 @@ export default function CustomerPortalPage() {
                 key={order.id}
                 href={`/kunde/oppdrag/${order.id}`}
               >
-                <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors cursor-pointer">
+                <div className="flex items-center justify-between p-5 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-lg bg-brand-light/30 flex items-center justify-center">
                       <Wrench className="w-5 h-5 text-brand" />
