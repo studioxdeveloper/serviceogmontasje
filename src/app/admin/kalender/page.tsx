@@ -188,12 +188,12 @@ export default function AdminCalendarPage() {
           </div>
 
           {selectedOrders.length > 0 ? (
-            <div className="">
+            <div>
               {selectedOrders.map((order) => (
                 <Link 
                   key={order.id}
                   href={`/admin/ordrer/${order.id}`}
-                  className="block p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors"
+                  className="block p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors mb-2"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <p className="font-medium text-brand-dark text-sm">{order.customerName}</p>

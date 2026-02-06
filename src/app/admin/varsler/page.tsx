@@ -136,11 +136,11 @@ export default function AdminNotificationsPage() {
             <h2 className="font-heading font-semibold text-brand-dark">Mottakere</h2>
           </div>
 
-          <div className="">
+          <div>
             {externalPartners.map((partner) => (
               <div 
                 key={partner.id}
-                className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
+                className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl mb-2"
               >
                 <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
                   <Building2 className="w-4 h-4 text-gray-600" />

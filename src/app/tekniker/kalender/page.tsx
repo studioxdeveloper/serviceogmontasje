@@ -175,11 +175,12 @@ export default function TechnicianCalendarPage() {
 
       {/* Orders for selected date */}
       {selectedOrders.length > 0 ? (
-        <div className="">
+        <div>
           {selectedOrders.map((order) => (
             <Link 
               key={order.id}
               href={`/tekniker/oppdrag/${order.id}`}
+              className="block mb-2"
             >
               <Card hover className="p-4">
                 <div className="flex items-start gap-3">

@@ -188,12 +188,12 @@ export default function PartnerCalendarPage() {
           </div>
 
           {selectedOrders.length > 0 ? (
-            <div className="">
+            <div>
               {selectedOrders.map((order) => (
                 <Link 
                   key={order.id}
                   href={`/partner/ordrer/${order.id}`}
-                  className="block p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors"
+                  className="block p-4 bg-gray-50 rounded-xl hover:bg-brand-bg transition-colors mb-2"
                 >
                   {order.isFromSM && (
                     <div className="flex items-center gap-1.5 mb-2">
