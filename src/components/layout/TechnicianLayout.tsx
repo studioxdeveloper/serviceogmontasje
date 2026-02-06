@@ -49,7 +49,7 @@ export function TechnicianLayout({ children }: { children: React.ReactNode }) {
 
         {/* Bottom navigation - Floating pill style */}
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 px-4 w-full max-w-[900px]">
-          <nav className="mx-auto max-w-sm bg-brand-dark/95 backdrop-blur-xl rounded-full shadow-2xl px-2 py-2">
+          <nav className="mx-auto max-w-sm bg-brand-dark/95 backdrop-blur-xl rounded-2xl shadow-2xl px-2 py-2">
             <div className="flex items-center justify-around">
               {navigation.map((item) => {
                 const isActive = pathname === item.href || 
@@ -60,7 +60,7 @@ export function TechnicianLayout({ children }: { children: React.ReactNode }) {
                     key={item.name}
                     href={item.href}
                     className={cn(
-                      'flex flex-col items-center gap-1 py-2 px-5 rounded-full transition-all',
+                      'flex flex-col items-center gap-1 py-2 px-5 rounded-xl transition-all',
                       isActive 
                         ? 'bg-brand text-white' 
                         : 'text-white/60 hover:text-white'
