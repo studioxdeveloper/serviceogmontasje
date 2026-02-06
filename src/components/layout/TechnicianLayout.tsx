@@ -47,31 +47,33 @@ export function TechnicianLayout({ children }: { children: React.ReactNode }) {
           {children}
         </main>
 
-        {/* Bottom navigation - iOS glass style */}
-        <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] z-30 bg-white/80 backdrop-blur-xl border-t border-gray-200/50 px-6 py-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))]">
-          <div className="flex items-center justify-around max-w-md mx-auto">
-            {navigation.map((item) => {
-              const isActive = pathname === item.href || 
-                (item.href === '/tekniker' && pathname.startsWith('/tekniker/oppdrag'))
-              
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    'flex flex-col items-center gap-1 py-2 px-4 rounded-xl transition-all',
-                    isActive 
-                      ? 'text-brand' 
-                      : 'text-gray-400 hover:text-gray-600'
-                  )}
-                >
-                  <item.icon className={cn('w-5 h-5', isActive && 'text-brand')} />
-                  <span className="text-xs font-medium">{item.name}</span>
-                </Link>
-              )
-            })}
-          </div>
-        </nav>
+        {/* Bottom navigation - Floating pill style */}
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 px-4 w-full max-w-[900px]">
+          <nav className="mx-auto max-w-sm bg-brand-dark/95 backdrop-blur-xl rounded-2xl shadow-2xl px-2 py-2">
+            <div className="flex items-center justify-around">
+              {navigation.map((item) => {
+                const isActive = pathname === item.href || 
+                  (item.href === '/tekniker' && pathname.startsWith('/tekniker/oppdrag'))
+                
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={cn(
+                      'flex flex-col items-center gap-1 py-2 px-5 rounded-xl transition-all',
+                      isActive 
+                        ? 'bg-brand text-white' 
+                        : 'text-white/60 hover:text-white'
+                    )}
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span className="text-[10px] font-medium">{item.name}</span>
+                  </Link>
+                )
+              })}
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   )
